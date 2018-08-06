@@ -3,12 +3,13 @@
 module.exports = {
 
   development: {
-    client: 'pg',
-    connection: 'postgresql:///memory3'
+    client:     'pg',
+    connection: process.env.DATABASE_URL || 'postgres://localhost/game',
   },
 
   production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL
-  }
+    client:     'pg',
+    connection: process.env.DATABASE_URL || 'postgres://localhost/game',
+  },
+
 };
