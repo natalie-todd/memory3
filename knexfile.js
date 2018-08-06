@@ -4,7 +4,6 @@ module.exports = {
 
   development: {
     client: 'pg',
-    // '///'is shorthand for local host
     connection: 'postgresql:///memory3'
   },
 
